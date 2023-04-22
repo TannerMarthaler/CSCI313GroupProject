@@ -1,21 +1,48 @@
 import { Component } from '@angular/core';
-import { NgbDateStruct, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
+import { CalendarView, CalendarEvent } from 'angular-calendar';
+import { startOfDay } from 'date-fns';
+import nextWednesday from 'date-fns/nextWednesday';
 
 @Component({
-	selector: 'ngbd-datepicker-basic',
-	standalone: true,
-	imports: [NgbDatepickerModule, FormsModule, JsonPipe],
-	templateUrl: './datepicker-basic.html',
+  selector: 'app-calendar',
+  templateUrl: './calendar.component.html',
+  styleUrls: ['./calendar.component.css']
 })
-export class NgbdDatepickerBasic {
-	model: NgbDateStruct;
-	date: { year: number; month: number };
+export class CalendarComponent {
+  sendDate: Date = new Date();
+  viewDate: Date = new Date();
+  view: CalendarView = CalendarView.Month;
+  CalendarView = CalendarView;
+  sendEvents!: CalendarEvent[];
+  
+  setView(view: CalendarView) {
+    this.view = view;
+  }
 
-	constructor(private calendar: NgbCalendar) {}
 
-	selectToday() {
-		this.model = this.calendar.getToday();
-	}
+  
+  events: CalendarEvent[] = [
+    {
+      start: (new Date()),
+      title: 'First event',
+    },
+    {
+      start: startOfDay(new Date()),
+      title: 'Second event',
+    },
+    {
+      start: (new Date("2023-04-13T15:30:00")),
+      end: (new Date("2023-04-13T17:30:00")),
+      title: 'test',
+    }
+  ]
+
+
+  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+    console.log(date);
+    this.sendDate = date;
+    this.sendEvents = events;
+    //let x=this.adminService.dateFormat(date);
+    //this.openAppointmentList(x);
+  }
 }
