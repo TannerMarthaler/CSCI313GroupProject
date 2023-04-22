@@ -1,0 +1,19 @@
+nav a {
+    padding: 1rem;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    /* background-color: #e8e8e8; */
+    background-color:rgb(105, 51, 13);
+    /* color: #3d3d3d; */
+    color:beige;
+    border-radius: 4px;
+  }
+  
+  nav a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  nav a:active {
+    background-color: black;
+  }
