@@ -1,7 +1,14 @@
-<p>calendar works!</p>
-<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-  <script>var elt = document.getElementById('calculator');
-    var calculator = Desmos.GraphingCalculator(elt);
-    calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
-  </script>
-<div id="calculator" style="width: 600px; height: 400px;"></div>
+<p>Simple datepicker</p>
+
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+
+<hr />
+
+<button class="btn btn-sm btn-outline-primary me-2" (click)="selectToday()">Select Today</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo()">To current month</button>
+<button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+
+<hr />
+
+<pre>Month: {{ date.month }}.{{ date.year }}</pre>
+<pre>Model: {{ model | json }}</pre>
