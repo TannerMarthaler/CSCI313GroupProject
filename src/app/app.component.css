@@ -1,0 +1,50 @@
+header{
+    text-align : center;
+    overflow : hidden;
+    position : relative;
+}
+
+.bgImage{
+    opacity: 0.5;
+    position : absolute;
+    left : 0;
+    top : 0;
+    width : 100%;
+    height: 500px;
+}
+
+.logo{
+    height: 75px;
+}
+
+.signInBtn{
+    opacity: .65;
+}
+
+.signInBtn:hover{
+    opacity: 1;
+}
+
+.headerContent{
+    position : relative;
+    font-weight : bold;
+}
+
+.title{
+    font-size: xx-large;
+}
+
+.btn-success{
+    border-color : transparent;
+    background-color: transparent;
+}
+
+.btn-success:active{
+    border-color : transparent;
+    background-color: transparent;
+}
+
+.navBar{
+    height: 50px;
+    margin-right: 175px;
+}
