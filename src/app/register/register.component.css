@@ -4,13 +4,17 @@
 }
 
 .body{
-    text-align:center;
+    text-align:right;
 }
 
 .inputs{
-    text-align:center;
+    margin-right:43%;
 }
 
 .name-inputs{
+    text-align:center;
+}
+
+.page{
     text-align:center;
 }
