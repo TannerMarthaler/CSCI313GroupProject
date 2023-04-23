@@ -1,0 +1,19 @@
+input{
+    text-align: left;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    width: 300px;
+    border: 5px solid gray;
+    padding: 50px;
+    margin: 20px;
+}
+
+.input {
+    align-items: center;
+}

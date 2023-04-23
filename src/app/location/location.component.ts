@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Location} from './../location';
 
 @Component({
   selector: 'app-location',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class LocationComponent {
 
-  location = 'Fargo'
+  location: Location = {
+
+    name: 'Fargo',
+    description: 'address',
+    openComputers: 8,
+    imageLink: ''
+  };
 
 }
