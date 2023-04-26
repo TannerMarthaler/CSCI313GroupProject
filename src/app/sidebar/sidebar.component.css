@@ -1,14 +1,40 @@
 .sidebar {
     position: fixed;
     top: 0;
-    left: -300px; /* position off-screen */
-    width: 300px;
+    left: -400px; /* position off-screen */
+    width: 400px;
     height: 100%;
     background-color: tan;
     transition: left 0.3s ease-in-out;
   }
   
   .sidebar--open {
-    left: 100px; /* position on-screen */
+    left: 0px; /* position on-screen */
+  }
+
+  .content{
+    text-align : left;
+    margin-left : 25px;
+    font-size : xx-large;
+  }
+
+  .navBar{
+    height : 50px;
+    width : auto;
   }
   
+  .btn-success{
+    font-size: xx-large;
+    border-color : transparent;
+    background-color : transparent;
+    color : black;
+  }
+
+  .btn-success:hover{
+    background-color : grey;
+  }
+
+  .btn-success:active{
+    border-color : transparent;
+    background-color : transparent;
+  }

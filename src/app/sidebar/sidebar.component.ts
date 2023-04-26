@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
   @Input() sidebarToggle : boolean = false;
+
+  closeSidebar() : void{
+    this.sidebarToggle = !this.sidebarToggle;
+  }
 }
