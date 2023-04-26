@@ -1,12 +1,13 @@
-<header class="overwrite">
+<header>
   <img class="bgImage" src="assets/pictures/cafeheader.jpg" alt="" />
 
   <div class="container-fluid headerContent">
     <div class="row">
       <div class="col-md-2">
-        <button class="btn btn-success">
+        <button class="btn btn-success" (click)="toggleSidebar()">
           <img class="navBar" src="assets/pictures/navbar.png" alt="" />
         </button>
+        <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
       </div>
       <div class="col-md-8 title">The Spot</div>
       <div class="col-md-2">
