@@ -1,6 +1,3 @@
-.page{
-}
-
 .header {
     /* margin-top: 40px; */
     padding-top:40px;
@@ -11,26 +8,6 @@
     margin-right:5%;
   }
   
-  .sidebar,
-  .title,
-  .sign-in {
-    display: inline-block;
-  }
-  
-  .sidebar {
-    text-align: left;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: xx-large;
-  }
-  
-  .sign-in {
-    text-align: right;
-  }
-  
-
 .body{
     text-align:center;
     margin-left:15%;
