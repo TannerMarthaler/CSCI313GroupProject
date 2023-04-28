@@ -1,0 +1,42 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px; /* position off-screen */
+    width: 400px;
+    height: 100%;
+    background-color: rgb(201, 197, 197);
+    transition: left 0.4s ease-in-out;
+  }
+  
+  .sidebar--open {
+    left: 0px; /* position on-screen */
+  }
+
+  .navBar{
+    height : 50px;
+    width : auto;
+  }
+  
+  .btn-primary{
+    font-size: xx-large;
+    border-color : transparent;
+    background-color : transparent;
+    color : black;
+  }
+
+  .btn-primary:hover{
+    background-color : grey;
+  }
+
+  .btn-primary:active{
+    border-color : transparent;
+    background-color : transparent;
+  }
+
+  .sidebar-button{
+    font-size : xx-large;
+    font-family :'Courier New', Courier, monospace;
+    margin-bottom : 30px;
+    margin-top : 10px;
+    width : 400px;
+  }

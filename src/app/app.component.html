@@ -1,19 +1,42 @@
-<div>
-  <h1>Welcome to the beginning of the website :)</h1>
-  <button class="btn btn-primary">Bootstrap test</button>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-    cumque dolores nobis, doloribus at veritatis neque quas officia
-    exercitationem? Voluptatibus.
-  </p>
-  <p>This change is done by Tanner</p>
-  <p>branch test</p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ab
-    voluptates earum placeat repellat assumenda nihil corrupti nesciunt qui, eum
-    consectetur quis recusandae aliquam at incidunt error excepturi, aut
-    quisquam delectus iure suscipit omnis rerum atque debitis. In ipsa ad
-    numquam, hic recusandae incidunt, quidem laudantium reiciendis aliquam
-    aspernatur molestiae.
-  </p>
+<header>
+  <img class="bgImage" src="assets/pictures/cafeheader.jpg" alt="" />
+  <div class="container-fluid headerContent">
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-success" (click)="toggleSidebar()">
+          <img class="navBar" src="assets/pictures/navbar.png" alt="" />
+        </button>
+        <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
+      </div>
+      <div class="col-md-8 title">The Spot</div>
+      <div class="col-md-2">
+        <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
+        <button class="btn btn-primary signInBtn" routerLink="/sign-in">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</header>
+
+<div class="body">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut asperiores
+  incidunt eos officia laudantium quam iusto numquam rerum quidem repellat?
 </div>
