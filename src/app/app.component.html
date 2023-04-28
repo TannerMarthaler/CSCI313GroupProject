@@ -1,6 +1,7 @@
-
 <header>
-  <img class="bgImage" src="assets/pictures/cafeheader.jpg" alt="" />
+  <div *ngIf="currentRoute()">
+    <img class="bgImage" src="../assets/pictures/cafeheader.jpg" alt="" />
+  </div>
   <div class="container-fluid headerContent">
     <div class="row">
       <div class="col-md-2">
@@ -19,25 +20,5 @@
     </div>
   </div>
 
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+  <router-outlet></router-outlet>
 </header>
-
-<div class="body">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut asperiores
-  incidunt eos officia laudantium quam iusto numquam rerum quidem repellat?
-</div>

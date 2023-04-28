@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
 import { RoutingModule } from './routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SignInComponent,
     RegisterComponent,
     AboutComponent,
-    SidebarComponent
+    SidebarComponent,
+    HomeComponent
 
   ],
   imports: [
