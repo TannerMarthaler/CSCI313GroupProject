@@ -4,18 +4,12 @@
     left: -400px; /* position off-screen */
     width: 400px;
     height: 100%;
-    background-color: tan;
-    transition: left 0.3s ease-in-out;
+    background-color: rgb(201, 197, 197);
+    transition: left 0.4s ease-in-out;
   }
   
   .sidebar--open {
     left: 0px; /* position on-screen */
-  }
-
-  .content{
-    text-align : left;
-    margin-left : 25px;
-    font-size : xx-large;
   }
 
   .navBar{
@@ -23,18 +17,26 @@
     width : auto;
   }
   
-  .btn-success{
+  .btn-primary{
     font-size: xx-large;
     border-color : transparent;
     background-color : transparent;
     color : black;
   }
 
-  .btn-success:hover{
+  .btn-primary:hover{
     background-color : grey;
   }
 
-  .btn-success:active{
+  .btn-primary:active{
     border-color : transparent;
     background-color : transparent;
+  }
+
+  .sidebar-button{
+    font-size : xx-large;
+    font-family :'Courier New', Courier, monospace;
+    margin-bottom : 30px;
+    margin-top : 10px;
+    width : 400px;
   }

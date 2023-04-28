@@ -1,25 +1,30 @@
 <div class="sidebar" [class.sidebar--open]="sidebarToggle">
-  <div class="content">
-    <button class="btn btn-success" (click)="closeSidebar()">
+  <div>
+    <button class="btn btn-primary sidebar-button" (click)="closeSidebar()">
       <img class="navBar" src="assets/pictures/closeNavbar.png" alt="" /> Close
       Sidebar
     </button>
     <br />
-    <a href="">Home</a>
+    <button class="btn btn-primary sidebar-button" routerLink="">Home</button>
     <br />
+    <button class="btn btn-primary sidebar-button" routerLink="/menu">
+      Menu
+    </button>
     <br />
-    <a href="">Menu</a>
+    <button class="btn btn-primary sidebar-button" routerLink="/locations">
+      Locations
+    </button>
     <br />
+    <button class="btn btn-primary sidebar-button" routerLink="/calendar">
+      Calendar
+    </button>
     <br />
-    <a href="">Locations</a>
+    <button class="btn btn-primary sidebar-button" routerLink="/about-us">
+      About Us
+    </button>
     <br />
-    <br />
-    <a href="">Calendar</a>
-    <br />
-    <br />
-    <a href="">About Us</a>
-    <br />
-    <br />
-    <a href="">Contact Us</a>
+    <button class="btn btn-primary sidebar-button" routerLink="/contact-us">
+      Contact Us
+    </button>
   </div>
 </div>

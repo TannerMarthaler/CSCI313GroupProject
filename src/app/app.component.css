@@ -14,7 +14,8 @@ header{
 }
 
 .logo{
-    height: 75px;
+    height: 50px;
+    width: auto;
 }
 
 .signInBtn{
@@ -28,6 +29,10 @@ header{
 .headerContent{
     position : relative;
     font-weight : bold;
+    margin-top : 10px;
+
+    /* position : fixed;  
+    width : 100%;  */
 }
 
 .title{
@@ -45,6 +50,6 @@ header{
 }
 
 .navBar{
-    height: 50px;
+    height: 40px;
     margin-right: 175px;
 }
