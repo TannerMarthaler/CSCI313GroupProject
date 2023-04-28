@@ -1,0 +1,38 @@
+.page{
+}
+
+.header {
+    /* margin-top: 40px; */
+    padding-top:40px;
+    padding-bottom:400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left:5%;
+    margin-right:5%;
+  }
+  
+  .sidebar,
+  .title,
+  .sign-in {
+    display: inline-block;
+  }
+  
+  .sidebar {
+    text-align: left;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: xx-large;
+  }
+  
+  .sign-in {
+    text-align: right;
+  }
+  
+
+.body{
+    text-align:center;
+    margin-left:15%;
+    margin-right:15%;
+}

@@ -8,13 +8,23 @@ import { MatButtonModule } from '@angular/material/button';
 // Need to run the command npm install --save @angular/material in the command terminal 
 
 import { AppComponent } from './app.component';
+
+import { SignInComponent } from './sign-in/sign-in.component';
+import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
 import { RoutingModule } from './routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+
+    SignInComponent,
+    RegisterComponent,
+    AboutComponent,
     SidebarComponent
+
   ],
   imports: [
     BrowserModule,
