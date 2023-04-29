@@ -1,0 +1,28 @@
+<div class="header">
+</div>
+
+<div *ngFor="let item of menuTest">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h6>{{ item.name }}</h6>
+            </div>
+            <ul>
+                <li>
+                    Price: {{ item.price }}
+                </li>
+                <li>
+                    Quantity: {{ item.quantity }}
+                </li>
+            </ul>
+            <br>
+            {{ item.desc }}
+            <br>
+            <button class="btn btn-primary" (click)="addToCart(item.id)">Add to cart</button>
+        </div>
+    </div>
+</div>
+
+<hr>
+<br>
+<app-cart [cartItems]="menuTest"></app-cart>

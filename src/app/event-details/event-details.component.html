@@ -1,5 +1,5 @@
-<header>Date details: </header>
-<p>{{ receiveDate }}</p>
+<header>Date details for {{ receiveDate | date }}</header>
+<p></p>
 <ul *ngIf="eventsForDate && eventsForDate.length > 0">
-  <li *ngFor="let event of eventsForDate">{{ event.title }}</li>
+  <li *ngFor="let event of eventsForDate">{{ event.title }} | Start Time: {{event.start | date:'shortTime'}}</li>
 </ul>
