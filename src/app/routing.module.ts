@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { MenuComponent } from './menu/menu.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 const ROUTES : Routes = [
   { path : '', component : HomeComponent },
-  // { path : 'menu', component : MenuComponent },
+  { path : 'menu', component : MenuComponent },
   // { path : 'locations', component : LocationComponent },
-  // { path : 'calendar', component : CalendarComponent },
+  { path : 'calendar', component : CalendarComponent },
   { path : 'about', component : AboutComponent },
   // { path : 'contact-us', component : ContactUsComponent },
   { path : 'sign-in', component : SignInComponent }
