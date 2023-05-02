@@ -1,0 +1,21 @@
+<div class="container-flush">
+    <div class="row">
+        <div class="col-md-8">
+            <div *ngFor="let item of cartItems">
+                <div *ngIf="item.quantity">
+                    <p>{{ item.name }}
+                        <br>
+                    </p>
+
+                    <button class="btn btn-primary" (click)="decrement(item.id)">-</button>
+                    {{ item.quantity }}
+                    <button class="btn btn-primary" (click)="increment(item.id)">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, laboriosam.</p>
+        </div>
+    </div>
+</div>
+
