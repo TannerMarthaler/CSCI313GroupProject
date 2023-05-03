@@ -8,7 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MenuComponent } from './menu/menu.component';
 import { CalendarComponent } from './calendar/calendar.component';
-
+import { CartComponent } from './cart/cart.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const ROUTES : Routes = [
   { path : '', component : HomeComponent },
@@ -17,7 +18,9 @@ const ROUTES : Routes = [
   { path : 'calendar', component : CalendarComponent },
   { path : 'about', component : AboutComponent },
   // { path : 'contact-us', component : ContactUsComponent },
-  { path : 'sign-in', component : SignInComponent }
+  { path : 'sign-in', component : SignInComponent },
+  { path : 'cart', component : CartComponent },
+  { path : 'contact-us', component : ContactUsComponent }
 ];
 
 @NgModule({

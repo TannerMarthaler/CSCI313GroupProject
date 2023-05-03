@@ -51,9 +51,18 @@ import { HomeComponent } from './home/home.component';
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
-    }),
+    })   
 
   ],
+  // imports: [
+  //   BrowserModule,
+  //   RoutingModule,
+  //   MatToolbarModule,
+  //   MatSidenavModule,
+  //   MatIconModule,
+  //   MatListModule,
+  //   MatButtonModule
+  // ],
   // imports: [
   //   BrowserModule,
     // RoutingModule,
