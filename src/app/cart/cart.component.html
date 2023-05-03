@@ -1,21 +1,44 @@
 <div class="container-flush">
-    <div class="row">
-        <div class="col-md-8">
-            <div *ngFor="let item of cartItems">
-                <div *ngIf="item.quantity">
-                    <p>{{ item.name }}
-                        <br>
-                    </p>
+  <div class="row">
+    <div class="col-md-8">
+      <h6>List of items in your cart:</h6>
+      <hr />
+      <div *ngFor="let item of cartItems">
+        <div *ngIf="item.quantity">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                {{ item.name }}
+              </div>
+              <p>
+                Individual price: ${{ item.price }}
+                <br />
+                Total price for {{ item.quantity }}: ${{
+                  item.price * item.quantity
+                }}
+                <br />
+              </p>
 
-                    <button class="btn btn-primary" (click)="decrement(item.id)">-</button>
-                    {{ item.quantity }}
-                    <button class="btn btn-primary" (click)="increment(item.id)">+</button>
-                </div>
+              <button class="btn btn-primary" (click)="decrement(item.id)">
+                -
+              </button>
+              {{ item.quantity }}
+              <button class="btn btn-primary" (click)="increment(item.id)">
+                +
+              </button>
             </div>
+          </div>
         </div>
-        <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, laboriosam.</p>
-        </div>
+      </div>
     </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" routerLink="/menu">Back to menu</button>
+      <br />
+      <h5>Total items in cart: {{ totalItems }}</h5>
+      <br />
+      <h5>Total price: ${{ totalPrice }}</h5>
+      <button class="btn btn-primary" (click)="handleCheckOut()">Check out</button>
+            <p>{{successText}}</p>
+    </div>
+  </div>
 </div>
-

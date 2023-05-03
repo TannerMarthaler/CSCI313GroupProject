@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { Router } from '@angular/router';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInService } from './sign-in.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,15 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   isSidebarOpen = false;
+  loggedIn! : boolean;
 
-  constructor(private rout : Router){}
+  constructor(private rout : Router, public signInService : SignInService){}
+
+  ngOnInit() {
+    this.signInService.updateEvent.subscribe((value: any) => {
+      this.loggedIn = value;
+    });
+  }
 
   toggleSidebar() : void{
     this.isSidebarOpen = !this.isSidebarOpen
@@ -18,5 +27,9 @@ export class AppComponent {
 
   currentRoute() : boolean{
     return this.rout.url == '/';
+  }
+
+  logout(){
+    this.signInService.logout();
   }
 }

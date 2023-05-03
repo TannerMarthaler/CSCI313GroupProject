@@ -45,3 +45,11 @@
     margin-top : 10px;
     width : 400px;
   }
+
+  #selected{
+    background-color: red;
+  }
+
+  #unselected{
+    background-color: blue;
+  }

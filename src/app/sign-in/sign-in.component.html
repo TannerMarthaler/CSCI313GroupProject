@@ -3,7 +3,7 @@
     <h5>Log into your account here.</h5>
     <br />
     <!--"here" needs to be changed to a link to Register page -->
-    <h5>Need an account? Sign up here</h5>
+    <h5>Need an account? <a routerLink="/register">Sign up here</a></h5>
     <!--"here" needs to be changed to a link to Register page -->
   </div>
   <br /><br /><br /><br /><br />
@@ -20,7 +20,7 @@
       </p>
     </div>
     <br /><br />
-    <button type="button" class="btn btn-outline-dark">Sign In</button>
+    <button type="button" class="btn btn-outline-dark" (click)="login()" routerLink="">Sign In</button>
     <br /><br />
     <p>Forget your password?</p>
   </div>
