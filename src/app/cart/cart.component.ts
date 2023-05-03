@@ -9,6 +9,7 @@ import { MenuItem } from 'src/model.ts/menu-item';
 })
 export class CartComponent {
   @Input() cartItems : MenuItem[] = [];
+  @Input() cartToggle : boolean = true;
 
   increment(id : number) : void{
     this.cartItems[id].quantity++;
@@ -17,4 +18,5 @@ export class CartComponent {
   decrement(id : number) : void{
     this.cartItems[id].quantity--;
   }
+
 }

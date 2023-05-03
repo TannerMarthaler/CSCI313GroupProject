@@ -24,10 +24,10 @@
       <div class="card-title">
         <h6>{{ item.name }}</h6>
       </div>
-      <ul>
-        <li>Price: {{ item.price }}</li>
-        <li>Quantity: {{ item.quantity }}</li>
-      </ul>
+      <div>
+        Price: {{ item.price }} <br />
+        Quantity: {{ item.quantity }}
+      </div>
       <br />
       {{ item.desc }}
       <br />
@@ -37,7 +37,3 @@
     </div>
   </div>
 </div>
-
-<hr />
-<br />
-<app-cart [cartItems]="menuTest"></app-cart>
