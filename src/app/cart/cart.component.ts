@@ -42,6 +42,10 @@ export class CartComponent {
     this.totalPrice -= this.cartItems[id].price;
   }
   
+  calculateTotalPrice(item: any) {
+    var subTotal = item.price * item.quantity;
+    return subTotal;
+  }
   
   handleCheckOut() {
     console.log("Service log in variable: " + this.signInService.isLoggedIn);
