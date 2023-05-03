@@ -1,0 +1,57 @@
+<!-- <div *ngIf="location">
+    <h1>Fargo</h1>
+    <p>PC's Open: {{fargoCount}}/30</p>
+    <div *ngFor="let pcs of pcFargoList">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+              <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+              <button class="btn-danger" (click)="removeFargo(pcs.id)">Book</button>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div *ngIf="!location">
+    <h1>Moorhead</h1>
+    <p>PC's Open: {{moorheadCount}}/30</p>
+    <div *ngFor="let pcs of pcMoorheadList">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+              <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+              <button class="btn-danger" (click)="removeMoorhead(pcs.id)">Book</button>
+            </div>
+          </div>
+    </div>
+</div> -->
+
+<!-- <div *ngIf="selectedLocation === 'Fargo'"> -->
+  <h1>Fargo</h1>
+  <p>PC's Open: {{fargoCount}}/30</p>
+  <div *ngFor="let pcs of pcFargoList">
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+            <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+            <button class="btn-danger" (click)="removeFargo(pcs.id)">Book</button>
+          </div>
+        </div>
+  </div>
+<!-- </div> -->
+
+<!-- <div *ngIf="[location]" === 'Moorhead'"> -->
+  <!-- <app-location-detail [location]="location"></app-location-detail> -->
+
+  <h1>Moorhead</h1>
+  <p>PC's Open: {{moorheadCount}}/30</p>
+  <div *ngFor="let pcs of pcMoorheadList">
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+            <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+            <button class="btn-danger" (click)="removeMoorhead(pcs.id)">Book</button>
+          </div>
+        </div>
+  </div>
+<!-- </div> -->

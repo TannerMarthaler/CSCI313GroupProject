@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ngx-slick-carousel": "^15.0.0",
+    "owl.carousel": "^2.3.4"
+  }
+}
