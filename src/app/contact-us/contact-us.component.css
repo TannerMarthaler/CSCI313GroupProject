@@ -1,0 +1,22 @@
+.header{
+    text-align:center;
+    margin-top:40px;
+}
+
+.body{
+    text-align:right;
+}
+
+.inputs{
+    margin-right:43%;
+    /* text-align:center; */
+}
+
+.name-inputs{
+    /* text-align:center; */
+    margin-right:43%;
+}
+
+.page{
+    text-align:center;
+}
