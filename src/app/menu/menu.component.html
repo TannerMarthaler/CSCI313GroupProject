@@ -22,10 +22,12 @@
   <ng-container *ngFor="let item of menu">
     <div class="col-md-3">
       <div class="card">
+        <img class="card-img-top" src="assets/pictures/cafeheader.jpg" alt="" />
         <div class="card-body">
           <div class="card-title">
             <h6>{{ item.name }}</h6>
           </div>
+
           <div>
             Price: {{ item.price }} <br />
             Quantity: {{ item.quantity }}
