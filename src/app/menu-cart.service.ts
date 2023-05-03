@@ -12,16 +12,38 @@ export class MenuCartService {
   constructor() { }
 
   selectedItems : MenuItem[] = menuItems;
+  totalItems : number = 0;
+  totalPrice : number = 0;
 
   getMenuItems() : MenuItem[]{
-    return this.selectedItems;
+    return menuItems;
   }
 
-  addMenuItem(id : number) : void{
+  incrementMenuItem(id : number) : void{
     this.selectedItems[id].quantity++;
+    this.totalItems++;
   }
 
   decrementMenuItem(id : number) : void{
     this.selectedItems[id].quantity--;
+    this.totalItems--;
+  }
+
+  getSelectedItems() : MenuItem[]{
+    return this.selectedItems;
+  }
+
+  getTotalItems() : number{
+    return this.totalItems;
+  }
+
+  getTotalPrice(): number{
+    for( let item of this.selectedItems ){
+      if( item.quantity > 0 ){
+        this.totalPrice += (item.quantity * item.price);
+      }
+    }
+
+    return this.totalPrice;
   }
 }

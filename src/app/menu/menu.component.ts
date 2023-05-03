@@ -10,19 +10,21 @@ import { MenuCartService } from '../menu-cart.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  menuTest : MenuItem[] = [];
+  menu : MenuItem[] = [];
   @Input() cartItems : number[] = [];
   @Input() cartToggle : boolean = false;
 
   constructor( private mcService : MenuCartService ) {}
 
   ngOnInit() {
-    this.menuTest = this.mcService.getMenuItems();
+    this.menu = this.mcService.getMenuItems();
   }
 
   addToCart(id : number) : void{
-    this.mcService.addMenuItem(id);
-    this.menuTest = this.mcService.getMenuItems();
+    this.mcService.incrementMenuItem(id);
   }
 
+  removeItem( id : number ) : void{
+    this.mcService.decrementMenuItem(id);
+  }
 }
