@@ -1,6 +1,10 @@
-<div class="container-flush">
+<div class="container">
     <div class="row">
         <div class="col-md-8">
+            <h1>In cart:</h1>
+            <div *ngIf="!quantity">
+                Cart is currently empty. Please add items.
+            </div>
             <div *ngFor="let item of cartItems">
                 <div *ngIf="item.quantity">
                     <p>{{ item.name }}
@@ -8,13 +12,14 @@
                     </p>
 
                     <button class="btn btn-primary" (click)="decrement(item.id)">-</button>
-                    {{ item.quantity }}
+                    Quantity: {{ item.quantity }} | Price per item: ${{ item.price }}
                     <button class="btn btn-primary" (click)="increment(item.id)">+</button>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, laboriosam.</p>
+            Total cost: ${{getTotalCost()}}
+            
         </div>
     </div>
 </div>
