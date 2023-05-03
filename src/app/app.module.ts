@@ -33,6 +33,11 @@ import { HomeComponent } from './home/home.component';
     EventDetailsComponent,
     MenuComponent,
     CartComponent,
+    SignInComponent,
+    RegisterComponent,
+    AboutComponent,
+    SidebarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,23 +45,16 @@ import { HomeComponent } from './home/home.component';
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
-    })
+    }),
 
-    SignInComponent,
-    RegisterComponent,
-    AboutComponent,
-    SidebarComponent,
-    HomeComponent
-
-  ],
-  imports: [
-    BrowserModule,
+    
     RoutingModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
