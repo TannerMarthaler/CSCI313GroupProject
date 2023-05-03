@@ -33,21 +33,11 @@ import { HomeComponent } from './home/home.component';
     EventDetailsComponent,
     MenuComponent,
     CartComponent,
-  ],
-  imports: [
-    BrowserModule,
-
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    })
-
     SignInComponent,
     RegisterComponent,
     AboutComponent,
     SidebarComponent,
     HomeComponent
-
   ],
   imports: [
     BrowserModule,
@@ -56,8 +46,23 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+
   ],
+  // imports: [
+  //   BrowserModule,
+    // RoutingModule,
+    // MatToolbarModule,
+    // MatSidenavModule,
+    // MatIconModule,
+    // MatListModule,
+    // MatButtonModule
+  // ],
   providers: [],
   bootstrap: [AppComponent]
 })

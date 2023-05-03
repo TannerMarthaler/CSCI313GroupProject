@@ -39,7 +39,7 @@
 <div [ngSwitch]="view">
 
     <mwl-calendar-month-view (dayClicked)="dayClicked($event.day)" *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events">
-    </mwl-calendar-month-view>
+    </mwl-calendar-month-view> 
 
     <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events">
     </mwl-calendar-week-view>
@@ -51,7 +51,7 @@
 
 <app-event-details [receiveDate]="sendDate" [receiveEvents]="events"></app-event-details>
 
-<!-- <div class="row text-center">
+<div class="row text-center">
 
     <div class="col-md-4">
         <div class="btn-group">
@@ -103,4 +103,4 @@
     day view appearing below calendar
     <mwl-calendar-day-view [viewDate]="viewDate">
     </mwl-calendar-day-view>
-</div> -->
+</div>
