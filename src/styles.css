@@ -2,3 +2,20 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
 
+.bgImage{
+    opacity: 0.5;
+    position : absolute;
+    left : 0;
+    top : 0;
+    width : 100%;
+    height: 500px;
+}
+
+.headerContent{
+    position : relative;
+    font-weight : bold;
+    margin-top : 10px;
+    z-index : 2;
+    /* position : fixed;  
+    width : 100%;  */
+}

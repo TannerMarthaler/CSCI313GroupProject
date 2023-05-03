@@ -1,28 +1,43 @@
-<div class="header">
-</div>
+<header>
+  <img class="bgImageMenu" src="../../assets/pictures/menuHeader.jpg" alt="" />
 
-<div *ngFor="let item of menuTest">
-    <div class="card">
-        <div class="card-body">
-            <div class="card-title">
-                <h6>{{ item.name }}</h6>
-            </div>
-            <ul>
-                <li>
-                    Price: {{ item.price }}
-                </li>
-                <li>
-                    Quantity: {{ item.quantity }}
-                </li>
-            </ul>
-            <br>
-            {{ item.desc }}
-            <br>
-            <button class="btn btn-primary" (click)="addToCart(item.id)">Add to cart</button>
-        </div>
+  <div class="container-fluid headerContent">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <p>Menu</p>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-success" routerLink="/cart">
+          <i
+            class="fa-sharp fa-solid fa-cart-shopping fa-3x"
+            style="color: #000000"
+          ></i>
+        </button>
+      </div>
     </div>
+  </div>
+</header>
+<div *ngFor="let item of menuTest">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        <h6>{{ item.name }}</h6>
+      </div>
+      <ul>
+        <li>Price: {{ item.price }}</li>
+        <li>Quantity: {{ item.quantity }}</li>
+      </ul>
+      <br />
+      {{ item.desc }}
+      <br />
+      <button class="btn btn-primary" (click)="addToCart(item.id)">
+        Add to cart
+      </button>
+    </div>
+  </div>
 </div>
 
-<hr>
-<br>
+<hr />
+<br />
 <app-cart [cartItems]="menuTest"></app-cart>
