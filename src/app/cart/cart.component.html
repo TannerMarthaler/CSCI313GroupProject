@@ -19,7 +19,8 @@
         </div>
         <div class="col-md-4">
             Total cost: ${{getTotalCost()}}
-            
+            <button class="btn btn-primary" (click)="handleCheckOut()">Check out</button>
+            <p>{{successText}}</p>
         </div>
     </div>
 </div>

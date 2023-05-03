@@ -13,9 +13,13 @@
       <div class="col-md-8 title">The Spot</div>
       <div class="col-md-2">
         <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
-        <button class="btn btn-primary signInBtn" routerLink="/sign-in">
+        <button class="btn btn-primary signInBtn" *ngIf="!loggedIn" routerLink="/sign-in">
           Sign In
         </button>
+        <span *ngIf="loggedIn">
+          Welcome, User
+          <button class="btn btn-primary logOutBtn" (click)="logout()">Log out</button>
+        </span>
       </div>
     </div>
   </div>
