@@ -15,20 +15,34 @@ export class CartComponent {
   cartItems : MenuItem[] = [];
   @Input() cartToggle : boolean = true;
   loggedIn : boolean = false;
-  quantity! : number;
-  totalCost! : number;
   successText : string = "";
+  totalItems : number = 0;
+  totalPrice : number = 0;
 
   constructor( private mcService : MenuCartService, public signInService : SignInService, private router : Router ) {}
 
-  ngOnInit() {
-    this.cartItems = this.mcService.getMenuItems();
-    this.getQuantity();
+  ngOnInit() : void{
+    this.cartItems = this.mcService.getSelectedItems();
+    this.totalItems = this.mcService.getTotalItems();
+    this.totalPrice = this.mcService.getTotalPrice();
     this.signInService.updateEvent.subscribe((value: any) => {
       this.loggedIn = value;
     });
   }
 
+  increment(id : number) : void{
+    this.mcService.incrementMenuItem(id);
+    this.totalItems++;
+    this.totalPrice += this.cartItems[id].price;
+  }
+
+  decrement(id : number) : void{
+    this.mcService.decrementMenuItem(id);
+    this.totalItems--;
+    this.totalPrice -= this.cartItems[id].price;
+  }
+  
+  
   handleCheckOut() {
     console.log("Service log in variable: " + this.signInService.isLoggedIn);
     console.log("Current log in status: " + this.loggedIn);
@@ -40,25 +54,6 @@ export class CartComponent {
     }
   }
 
-  increment(id : number) : void{
-    this.mcService.addMenuItem(id);
-    this.cartItems = this.mcService.getMenuItems();
-    this.getQuantity();
-  }
 
-  decrement(id : number) : void{
-    this.mcService.decrementMenuItem(id);
-    this.cartItems = this.mcService.getMenuItems();
-    this.getQuantity();
-  }
-
-  getQuantity() : void{
-    this.quantity = this.mcService.getQuantity();
-    console.log("Current quantity: " + this.quantity);
-  }
-
-  getTotalCost() : number{
-    return this.mcService.getTotalCost();
-  }
 
 }
