@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
   @Input() sidebarToggle : boolean = false;
+  test : string = '';
+
+  constructor( private route : Router ){}
 
   closeSidebar() : void{
     this.sidebarToggle = !this.sidebarToggle;

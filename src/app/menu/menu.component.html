@@ -1,43 +1,83 @@
 <header>
   <img class="bgImageMenu" src="../../assets/pictures/menuHeader.jpg" alt="" />
 
-  <div class="container-fluid headerContent">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <p>Menu</p>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-success" routerLink="/cart">
-          <i
-            class="fa-sharp fa-solid fa-cart-shopping fa-3x"
-            style="color: #000000"
-          ></i>
-        </button>
+  <!-- <div class="container headerContent"> -->
+  <!-- <div class="row col-md-6 offset-md-4"> -->
+  <!-- <div class="col-md-8"> -->
+  <p class="headerContent" style="margin-left: 47%; margin-right: 53%">Menu</p>
+  <!-- </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div> -->
+</header>
+
+<div class="row">
+  <p>Cart code (needs to be moved around)</p>
+  <button class="btn btn-success" routerLink="/cart">
+    <i
+      class="fa-sharp fa-solid fa-cart-shopping fa-3x"
+      style="color: #000000"
+    ></i>
+  </button>
+  <ng-container *ngFor="let item of menu">
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="assets/pictures/cafeheader.jpg" alt="" />
+        <div class="card-body">
+          <div class="card-title">
+            <h6>{{ item.name }}</h6>
+          </div>
+
+          <div>
+            Price: {{ item.price }} <br />
+            Quantity: {{ item.quantity }}
+          </div>
+          <br />
+          {{ item.desc }}
+          <br />
+          <div *ngIf="item.quantity == 0">
+            <button class="btn btn-primary" (click)="addToCart(item.id)">
+              Add to cart
+            </button>
+          </div>
+          <div *ngIf="item.quantity > 0">
+            <button class="btn btn-primary" (click)="removeItem(item.id)">
+              -
+            </button>
+            {{ item.quantity }}
+            <button class="btn btn-primary" (click)="addToCart(item.id)">
+              +
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-<div *ngFor="let item of menuTest">
+  </ng-container>
+</div>
+
+<!-- <div *ngFor="let item of menu">
   <div class="card">
     <div class="card-body">
       <div class="card-title">
         <h6>{{ item.name }}</h6>
       </div>
-      <ul>
-        <li>Price: {{ item.price }}</li>
-        <li>Quantity: {{ item.quantity }}</li>
-      </ul>
+      <div>
+        Price: {{ item.price }} <br />
+        Quantity: {{ item.quantity }}
+      </div>
       <br />
       {{ item.desc }}
       <br />
-      <button class="btn btn-primary" (click)="addToCart(item.id)">
-        Add to cart
-      </button>
+      <div *ngIf="item.quantity == 0">
+        <button class="btn btn-primary" (click)="addToCart(item.id)">
+          Add to cart
+        </button>
+      </div>
+      <div *ngIf="item.quantity > 0">
+        <button class="btn btn-primary" (click)="removeItem(item.id)">-</button>
+        {{ item.quantity }}
+        <button class="btn btn-primary" (click)="addToCart(item.id)">+</button>
+      </div>
     </div>
   </div>
-</div>
-
-<hr />
-<br />
-<app-cart [cartItems]="menuTest"></app-cart>
+</div> -->
