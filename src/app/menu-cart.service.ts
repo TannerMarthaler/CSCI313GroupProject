@@ -12,6 +12,7 @@ export class MenuCartService {
   constructor() { }
 
   selectedItems : MenuItem[] = menuItems;
+
   totalItems : number = 0;
   totalPrice : number = 0;
 
