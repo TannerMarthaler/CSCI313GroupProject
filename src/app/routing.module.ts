@@ -10,12 +10,14 @@ import { MenuComponent } from './menu/menu.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CartComponent } from './cart/cart.component';
 import { LocationComponent } from './location/location.component';
+import { LocationDetailComponent } from './location-detail/location-detail.component';
 
 
 const ROUTES : Routes = [
   { path : '', component : HomeComponent },
   { path : 'menu', component : MenuComponent },
   { path : 'locations', component : LocationComponent },
+  { path : 'location-detail', component : LocationDetailComponent},
   { path : 'calendar', component : CalendarComponent },
   { path : 'about', component : AboutComponent },
   // { path : 'contact-us', component : ContactUsComponent },

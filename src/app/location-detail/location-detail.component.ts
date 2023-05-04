@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import {pcFargo} from '../../model.ts/pcFargo';
 import {pcMoorhead} from '../../model.ts/pcMoorhead';
 import { LocationComponent } from '../location/location.component';
+import { LocationService } from '../location.service';
 
 @Component({
   selector: 'app-location-detail',
@@ -11,12 +12,19 @@ import { LocationComponent } from '../location/location.component';
 export class LocationDetailComponent {
   
 
-  // selectedLocation: Location;
+  selectedLocation: string = 'Fargo';
   // location: Location;
   // constructor(location: boolean){
 
   // }
   // @Input() location: boolean;
+
+  constructor( private locationService : LocationService ) {}
+
+  ngOnInit(){
+    this.selectedLocation = this.locationService.getLocationSearch();
+    console.log(this.selectedLocation);
+  }
 
   pcFargoList: pcFargo[] = [
     {

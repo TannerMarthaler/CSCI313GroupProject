@@ -5,13 +5,12 @@ import { LocationService } from './../location.service';
   selector: 'app-location',
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.css'],
-  providers: [LocationService]
 })
 export class LocationComponent {
-  @Output() location: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // @Output() location: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   locationList: {name: string, description: string, openComputers: number, imageLink: string}[] = []
-  selectedLocation: string = 'Fargo';
+  selectedLocation: string = '';
 
   constructor(private locationServices: LocationService){}
 
@@ -20,12 +19,13 @@ export class LocationComponent {
   }
 
   showLocationDetails(name: string): void {
-    this.selectedLocation = name;
+    this.locationServices.setLocationSearch(name);
+    console.log(name);
   }
 
-  whichLocation(): void {
-    this.location.emit(!this.location);
-  }
+  // whichLocation(): void {
+  //   this.location.emit(!this.location);
+  // }
 
     //Need to add login verification
     //isLoggedIn: void {

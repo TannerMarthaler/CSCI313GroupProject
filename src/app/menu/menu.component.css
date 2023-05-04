@@ -32,3 +32,12 @@
 header{
     margin-bottom: 10rem;
 }
+
+.menuImage{
+    height: 300px;
+    width: auto;
+}
+
+.menuItemCards{
+    margin-bottom: 10px;
+}

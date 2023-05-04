@@ -54,11 +54,12 @@
     <h5 class="card-title">{{ location.name }}</h5>
     <p class="card-text">{{ location.description }}</p>
     <p class="card-text">Open Computers: {{ location.openComputers }}</p>
-    <a
-      href="#"
+    <button
       class="btn btn-primary"
+      routerLink="/location-detail"
       (click)="showLocationDetails(location.name)"
-      >Go somewhere</a
     >
+      Go to this location
+    </button>
   </div>
 </div>

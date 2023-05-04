@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
 export class LocationService {
 
   constructor() { }
+
+  searchName : string = '';
+
   location = [
     {
       name: 'Fargo',
@@ -21,4 +24,14 @@ export class LocationService {
       imageLink: 'assets/pictures/MoorheadWatertower.jfif'
     }
   ];
+
+  setLocationSearch(name : string) : void{
+    this.searchName = name;
+    console.log(this.searchName);
+  }
+
+  getLocationSearch() : string{
+    console.log(this.searchName);
+    return this.searchName;
+  }
 }
