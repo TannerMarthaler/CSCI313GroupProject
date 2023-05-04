@@ -38,7 +38,7 @@
             <p class="card-text">
               Ram: {{ pcs.ram }}, GPU: {{ pcs.gpu }}, CPU: {{ pcs.processor }}
             </p>
-            <button class="btn btn-danger" (click)="removeFargo(pcs.id)">
+            <button class="btn btn-danger" (click)="removeFargo(pcs.id, 0)">
               Book
             </button>
           </div>
@@ -60,7 +60,7 @@
             <p class="card-text">
               Ram: {{ pcs.ram }}, GPU: {{ pcs.gpu }}, CPU: {{ pcs.processor }}
             </p>
-            <button class="btn btn-danger" (click)="removeMoorhead(pcs.id)">
+            <button class="btn btn-danger" (click)="removeMoorhead(pcs.id, 1)">
               Book
             </button>
           </div>

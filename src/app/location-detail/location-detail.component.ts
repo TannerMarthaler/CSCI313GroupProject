@@ -4,6 +4,7 @@ import {pcMoorhead} from '../../model.ts/pcMoorhead';
 import { LocationComponent } from '../location/location.component';
 import { LocationService } from '../location.service';
 
+
 @Component({
   selector: 'app-location-detail',
   templateUrl: './location-detail.component.html',
@@ -12,7 +13,7 @@ import { LocationService } from '../location.service';
 export class LocationDetailComponent {
   
 
-  selectedLocation: string = 'Fargo';
+  selectedLocation: string = '';
   // location: Location;
   // constructor(location: boolean){
 
@@ -25,6 +26,7 @@ export class LocationDetailComponent {
     this.selectedLocation = this.locationService.getLocationSearch();
     console.log(this.selectedLocation);
   }
+
 
   pcFargoList: pcFargo[] = [
     {
@@ -41,6 +43,15 @@ export class LocationDetailComponent {
     },
     {
       id: 4, location: 'Fargo', ram: '12 GB', gpu: 'GeForce 1660 Super', processor: 'AMD Ryzen 5 5500'
+    },
+    {
+      id: 5, location: 'Fargo', ram: '12 GB', gpu: 'Nvidia Titan RTX', processor: 'AMD Ryzen 7 5700'
+    },
+    {
+      id: 6, location: 'Fargo', ram: '16 GB', gpu: 'GeForce RTX 4070', processor: 'Intel Core i3'
+    },
+    {
+      id: 7, location: 'Fargo', ram: '12 GB', gpu: 'GeForce 1660 Super', processor: 'AMD Ryzen 5 5500'
     }
   ];
 
@@ -56,14 +67,11 @@ export class LocationDetailComponent {
     },
     {
       id: 3, location: 'Moorhead', ram: '16 GB', gpu: 'GeForce RTX 4070', processor: 'Intel Core i3'
-    },
-    {
-      id: 4, location: 'Moorhead', ram: '16 GB', gpu: 'GeForce 1660 Super', processor: 'AMD Ryzen 5 5500'
     }
   ];
 
-  fargoCount: number = 5;
-  moorheadCount: number = 5;
+  fargoCount: number = 8;
+  moorheadCount: number = 4;
 
   //  selectLocation: boolean { //used to decide which page to display fargo or moorhead
   //     if(locationNum == 0){
@@ -75,18 +83,20 @@ export class LocationDetailComponent {
   //  }
 
 
-  removeFargo(idRemove : number) : void {   //remove pc from display and decrease count
+  removeFargo(idRemove : number, id : number) : void {   //remove pc from display and decrease count
     this.pcFargoList.forEach((element,index)=>{
       if(element.id==idRemove) this.pcFargoList.splice(index,1);
    });
     this.fargoCount--;
+    this.locationService.decrementComputer(id);
   }
 
-  removeMoorhead(idRemove : number) : void {   //remove pc from display and decrease count
+  removeMoorhead(idRemove : number, id : number) : void {   //remove pc from display and decrease count
     this.pcMoorheadList.forEach((element,index)=>{
       if(element.id==idRemove) this.pcMoorheadList.splice(index,1);
    });
     this.moorheadCount--;
+    this.locationService.decrementComputer(id);
   }
 }
 

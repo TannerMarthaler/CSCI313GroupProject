@@ -9,7 +9,7 @@ import { LocationService } from './../location.service';
 export class LocationComponent {
   // @Output() location: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  locationList: {name: string, description: string, openComputers: number, imageLink: string}[] = []
+  locationList: {id: number, name: string, description: string, openComputers: number, imageLink: string}[] = []
   selectedLocation: string = '';
 
   constructor(private locationServices: LocationService){}
@@ -22,14 +22,5 @@ export class LocationComponent {
     this.locationServices.setLocationSearch(name);
     console.log(name);
   }
-
-  // whichLocation(): void {
-  //   this.location.emit(!this.location);
-  // }
-
-    //Need to add login verification
-    //isLoggedIn: void {
-
-    //}
 
 }

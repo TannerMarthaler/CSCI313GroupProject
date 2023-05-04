@@ -11,6 +11,7 @@ export class LocationService {
 
   location = [
     {
+      id: 0,
       name: 'Fargo',
       description: 'address',
       openComputers: 8,
@@ -18,6 +19,7 @@ export class LocationService {
     },
 
     {
+      id: 1,
       name: 'Moorhead',
       description: 'address',
       openComputers: 4,
@@ -33,5 +35,9 @@ export class LocationService {
   getLocationSearch() : string{
     console.log(this.searchName);
     return this.searchName;
+  }
+
+  decrementComputer(id : number) : void{
+    this.location[id].openComputers--;
   }
 }

@@ -9,6 +9,7 @@
     top : 0;
     width : 100%;
     height: 500px;
+    
 }
 
 .headerContent{
@@ -18,4 +19,8 @@
     z-index : 1;
     /* position : fixed;  
     width : 100%;  */
+}
+
+.backgroundApplicable{
+    background-color: rgb(226, 211, 191);
 }
