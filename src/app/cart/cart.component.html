@@ -14,7 +14,7 @@
                 Individual price: ${{ item.price }}
                 <br />
                 Total price for {{ item.quantity }}: ${{
-                  item.price * item.quantity
+                  calculateTotalPrice(item)
                 }}
                 <br />
               </p>

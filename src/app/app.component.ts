@@ -10,6 +10,7 @@ import { SignInService } from './sign-in.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'the-spot';
   isSidebarOpen = false;
   loggedIn! : boolean;
 

@@ -1,5 +1,7 @@
-<header>Date details for {{ receiveDate | date }}</header>
-<p></p>
-<ul *ngIf="eventsForDate && eventsForDate.length > 0">
-  <li *ngFor="let event of eventsForDate">{{ event.title }} | Start Time: {{event.start | date:'shortTime'}}</li>
-</ul>
+<div class="container overwrite">
+  <header>Date details for {{ receiveDate | date }}</header>
+  <p></p>
+  <ul *ngIf="eventsForDate && eventsForDate.length > 0">
+    <li *ngFor="let event of eventsForDate">{{ event.title }} | Start Time: {{event.start | date:'shortTime'}} | End Time: {{event.end | date:'shortTime'}}</li>
+  </ul>
+</div>

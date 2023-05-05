@@ -39,6 +39,7 @@ export class MenuCartService {
   }
 
   getTotalPrice(): number{
+    this.totalPrice = 0;
     for( let item of this.selectedItems ){
       if( item.quantity > 0 ){
         this.totalPrice += (item.quantity * item.price);
@@ -46,5 +47,11 @@ export class MenuCartService {
     }
 
     return this.totalPrice;
+  }
+
+  // Fix
+  clearCart() : MenuItem[]{
+    this.selectedItems = menuItems;
+    return menuItems;
   }
 }
