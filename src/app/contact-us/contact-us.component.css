@@ -1,0 +1,34 @@
+.header{
+    text-align:center;
+}
+
+.body{
+    text-align:right;
+}
+
+.inputs{
+    margin-right:43%;
+    /* text-align:center; */
+}
+
+.name-inputs{
+    /* text-align:center; */
+    margin-right:43%;
+}
+
+.page{
+    text-align:center;
+}
+
+textarea{
+    height: 150px;
+    width: 300px;
+}
+
+.questionArea{
+    margin-right: 40%
+}
+
+.questionLabel{
+    text-align : center
+}
