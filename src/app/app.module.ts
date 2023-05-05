@@ -47,21 +47,37 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
-
-    
     RoutingModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    })   
 
   ],
+  // imports: [
+  //   BrowserModule,
+  //   RoutingModule,
+  //   MatToolbarModule,
+  //   MatSidenavModule,
+  //   MatIconModule,
+  //   MatListModule,
+  //   MatButtonModule
+  // ],
+  // imports: [
+  //   BrowserModule,
+    // RoutingModule,
+    // MatToolbarModule,
+    // MatSidenavModule,
+    // MatIconModule,
+    // MatListModule,
+    // MatButtonModule
+  // ],
   providers: [],
   bootstrap: [AppComponent]
 })
