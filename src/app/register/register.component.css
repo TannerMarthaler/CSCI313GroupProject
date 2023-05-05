@@ -18,3 +18,16 @@
 .page{
     text-align:center;
 }
+
+input:invalid {
+    border: 3px solid red;
+  }
+
+  button:disabled {
+    color: #555;
+    cursor: not-allowed;
+    outline: #555;
+    border-color: gray;
+  }
+
+  

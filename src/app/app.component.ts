@@ -13,6 +13,7 @@ export class AppComponent {
   title = 'the-spot';
   isSidebarOpen = false;
   loggedIn! : boolean;
+  username! : string;
 
   constructor(private rout : Router, public signInService : SignInService){}
 
@@ -20,6 +21,13 @@ export class AppComponent {
     this.signInService.updateEvent.subscribe((value: any) => {
       this.loggedIn = value;
     });
+    this.signInService.updateNameEvent.subscribe((value: any) => {
+      this.username = value;
+    });
+  }
+
+  updateName() {
+    this.username = this.signInService.name;
   }
 
   toggleSidebar() : void{

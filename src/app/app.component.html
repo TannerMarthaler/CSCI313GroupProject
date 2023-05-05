@@ -21,7 +21,7 @@
           Sign In
         </button>
         <span *ngIf="loggedIn">
-          Welcome, User
+          Welcome, {{username}}
           <button class="btn btn-primary logOutBtn" (click)="logout()">
             Log out
           </button>

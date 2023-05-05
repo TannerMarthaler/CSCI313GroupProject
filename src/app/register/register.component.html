@@ -8,46 +8,47 @@
         <div class="name-inputs">
             <p>
                 <label for="fName">First Name: &nbsp; </label>
-                <input id="fName" #FName />
+                <input id="fName" [(ngModel)]="fName" name="fName" #fNameInput="ngModel" required>
                 <label for="lName">&emsp;Last Name: &nbsp; </label>
-                <input id="lName" #LName />
+                <input id="lName" [(ngModel)]="lName" name="lName" #lNameInput="ngModel" required>
             </p>
             <br>
         </div>
         <div class="inputs">
             <p>
                 <label for="email">Email: &nbsp; </label>
-                <input id="email" #Email />
+                <input id="email" type="email" [(ngModel)]="email" name="email" #emailInput="ngModel" required>
             </p>
             <br>
             <p>
                 <label for="phoneNumber">Phone Number: &nbsp; </label>
-                <input id="phoneNumber" #PhoneNumber />
+                <input id="phoneNumber" type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" #phoneNumberInput="ngModel" required>
             </p>
             <br>
             <p>
                 <label for="dateOfBirth">Date Of Birth: &nbsp; </label>
-                <input id="dateOfBirth" #DateOfBirth />
+                <input id="dateOfBirth" type="date" [(ngModel)]="dateOfBirth" name="dateOfBirth" #dateOfBirthInput="ngModel" required>
             </p>
             <br>
             <p>
                 <label for="address">Address: &nbsp; </label>
-                <input id="address" #Address />
+                <input id="address" [(ngModel)]="address" name="address" #addressInput="ngModel" required>
             </p>
             <br>
             <p>
                 <label for="Password">Password: &nbsp; </label>
-                <input id="Password" #Password />
+                <input id="password" [(ngModel)]="password" name="password" #passwordInput="ngModel" required>
             </p>
             <br>
             <p>
                 <label for="confirmPassword">Confirm Password: &nbsp; </label>
-                <input id="confirmPassword" #ConfirmPassword />
+                <input id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel" required>
             </p>
         </div>
         <br><br>
     </div>
-    <button type="button" class="btn btn-outline-primary" (click)="handleClick()">Create Account</button>
+    <button type="button" class="btn btn-outline-primary" [disabled]="!email || emailInput.invalid || phoneNumberInput.invalid || addressInput.invalid
+    || passwordInput.invalid || confirmPasswordInput.invalid" (click)="handleClick()">Create Account</button>
     <p>{{redirectText}}</p>
 </div>
 

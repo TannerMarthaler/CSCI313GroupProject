@@ -57,7 +57,8 @@ import { LocationDetailComponent } from './location-detail/location-detail.compo
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
 
   ],
   providers: [],
