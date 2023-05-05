@@ -35,8 +35,8 @@
                 <input id="question" #Question />  
             </p>
             <br>
-            <button type="button" class="btn btn-outline-primary">Submit</button>
+            <button type="button" class="btn btn-outline-primary"(click)="handleQuestionSubmission()">Submit</button>
+            <p>{{successText}}</p>
     </div>
-    
 </div>
 
