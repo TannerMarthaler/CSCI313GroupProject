@@ -1,0 +1,24 @@
+.cartFix{
+    padding-bottom: 475px;
+}
+
+.cartItemsCard{
+    margin-bottom: 5px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgb(91, 66, 33);
+    color : white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.buttonColor{
+    background-color: rgb(142, 115, 80);
+    border-color: rgb(142, 115, 80);
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
+}

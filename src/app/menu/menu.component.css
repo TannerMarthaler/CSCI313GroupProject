@@ -41,3 +41,13 @@ header{
 .menuItemCards{
     margin-bottom: 10px;
 }
+
+.buttonColor{
+    background-color: rgb(142, 115, 80);
+    border-color: rgb(142, 115, 80);
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
+}

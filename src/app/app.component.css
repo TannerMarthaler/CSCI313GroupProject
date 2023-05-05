@@ -47,3 +47,13 @@ header{
     height: 40px;
     margin-right: 175px;
 }
+
+.buttonColor{
+    background-color: rgb(142, 115, 80);
+    border-color: rgb(142, 115, 80);
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
+}

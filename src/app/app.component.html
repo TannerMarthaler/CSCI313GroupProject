@@ -15,7 +15,7 @@
         <div class="col-md-3">
           <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
           <button
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             *ngIf="!loggedIn"
             routerLink="/sign-in"
           >
@@ -23,7 +23,10 @@
           </button>
           <span *ngIf="loggedIn">
             Welcome, {{ username }}
-            <button class="btn btn-primary logOutBtn" (click)="logout()">
+            <button
+              class="btn btn-primary logOutBtn buttonColor"
+              (click)="logout()"
+            >
               Log out
             </button>
           </span>
@@ -44,7 +47,7 @@
         <div class="col-md-3">
           <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
           <button
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             *ngIf="!loggedIn"
             routerLink="/sign-in"
           >
@@ -52,7 +55,10 @@
           </button>
           <span *ngIf="loggedIn">
             Welcome, {{ username }}
-            <button class="btn btn-primary logOutBtn" (click)="logout()">
+            <button
+              class="btn btn-primary logOutBtn buttonColor"
+              (click)="logout()"
+            >
               Log out
             </button>
           </span>
