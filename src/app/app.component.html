@@ -2,30 +2,61 @@
   <div *ngIf="currentRoute()">
     <img class="bgImage" src="assets/pictures/cafeheader.jpg" alt="" />
   </div>
-  <div class="container-fluid headerContent">
-    <div class="row">
-      <div class="col-md-2">
-        <button class="btn btn-success" (click)="toggleSidebar()">
-          <img class="navBar" src="assets/pictures/navbar.png" alt="" />
-        </button>
-        <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
-      </div>
-      <div class="col-md-8 title">The Spot</div>
-      <div class="col-md-2">
-        <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
-        <button
-          class="btn btn-primary signInBtn"
-          *ngIf="!loggedIn"
-          routerLink="/sign-in"
-        >
-          Sign In
-        </button>
-        <span *ngIf="loggedIn">
-          Welcome, User
-          <button class="btn btn-primary logOutBtn" (click)="logout()">
-            Log out
+  <div *ngIf="backgroundApplicableRoute()">
+    <div class="container-fluid headerContent">
+      <div class="row backgroundApplicable">
+        <div class="col-md-2">
+          <button class="btn btn-success" (click)="toggleSidebar()">
+            <img class="navBar" src="assets/pictures/navbar.png" alt="" />
           </button>
-        </span>
+          <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
+        </div>
+        <div class="col-md-8 title">The Spot</div>
+        <div class="col-md-2">
+          <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
+          <button
+            class="btn btn-primary signInBtn"
+            *ngIf="!loggedIn"
+            routerLink="/sign-in"
+          >
+            Sign In
+          </button>
+          <span *ngIf="loggedIn">
+            Welcome, User
+            <button class="btn btn-primary logOutBtn" (click)="logout()">
+              Log out
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!backgroundApplicableRoute()">
+    <div class="container-fluid headerContent">
+      <div class="row">
+        <div class="col-md-2">
+          <button class="btn btn-success" (click)="toggleSidebar()">
+            <img class="navBar" src="assets/pictures/navbar.png" alt="" />
+          </button>
+          <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
+        </div>
+        <div class="col-md-8 title">The Spot</div>
+        <div class="col-md-2">
+          <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
+          <button
+            class="btn btn-primary signInBtn"
+            *ngIf="!loggedIn"
+            routerLink="/sign-in"
+          >
+            Sign In
+          </button>
+          <span *ngIf="loggedIn">
+            Welcome, User
+            <button class="btn btn-primary logOutBtn" (click)="logout()">
+              Log out
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </div>
