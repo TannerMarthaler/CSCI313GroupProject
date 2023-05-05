@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { pcFargo } from 'src/model.ts/pcFargo';
+import { pcMoorhead } from 'src/model.ts/pcMoorhead';
+import { pcFargoList } from './location-database';
+import { pcMoorheadList } from './location-database';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +12,17 @@ export class LocationService {
   constructor() { }
 
   searchName : string = '';
+
+  fargoPc : pcFargo[] = pcFargoList;
+  moorheadPc : pcMoorhead[] = pcMoorheadList;
+
+  getFargoItems() : pcFargo[]{
+    return pcFargoList;
+  }
+
+  getMoorheadItems() : pcMoorhead[]{
+    return pcMoorheadList;
+  }
 
   location = [
     {
