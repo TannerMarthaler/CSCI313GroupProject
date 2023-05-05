@@ -9,24 +9,27 @@
     <div class="inputs">
       <p>
         <label for="username">Username: &nbsp; </label>
-        <input id="username" #Username />
+        <input id="username" [(ngModel)]="username" name="username" #usernameInput="ngModel" required>
       </p>
       <br /><br />
       <p>
         <label for="password">Password: &nbsp; </label>
-        <input id="password" #Password />
+        <input id="password" [(ngModel)]="password" name="password" #passwordInput="ngModel" required>
       </p>
     </div>
     <br /><br />
     <button
+    [disabled]="usernameInput.invalid || passwordInput.invalid"
       type="button"
       class="btn btn-outline-dark"
       (click)="login()"
-      routerLink=""
     >
       Sign In
     </button>
+    <p id="redirect">{{redirectText}}</p>
     <br /><br />
-    <p>Forget your password?</p>
+    <p><a routerLink="/sign-in" (click)="forgor = true; fastRedirect(); cycleWord()">Forgot your password?</a></p>
+    <p *ngIf="forgor">{{currentWord}}</p>
+    <p></p>
   </div>
 </div>

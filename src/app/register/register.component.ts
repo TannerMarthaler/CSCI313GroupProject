@@ -30,7 +30,7 @@ export class RegisterComponent {
 
   handleClick() {
     this.login();
-    this.signInService.newName(this.fName);
+    this.signInService.newName(this.fName + " " + this.lName);
     this.redirectText = "Account successfully created. Logging you in..."
     setTimeout(() => {
       this.router.navigate(['']);

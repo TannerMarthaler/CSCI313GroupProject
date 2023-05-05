@@ -21,3 +21,7 @@ button{
 .inputs{
     margin-right:100px;
 }
+
+#redirect{
+    font-size: medium;
+}
