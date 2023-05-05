@@ -13,6 +13,7 @@ export class AppComponent {
   title = 'the-spot';
   isSidebarOpen = false;
   loggedIn! : boolean;
+  username! : string;
 
   constructor(private rout : Router, public signInService : SignInService){}
 
@@ -20,10 +21,17 @@ export class AppComponent {
     this.signInService.updateEvent.subscribe((value: any) => {
       this.loggedIn = value;
     });
+    this.signInService.updateNameEvent.subscribe((value: any) => {
+      this.username = value;
+    });
+  }
+
+  updateName() {
+    this.username = this.signInService.name;
   }
 
   toggleSidebar() : void{
-    this.isSidebarOpen = !this.isSidebarOpen
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
   currentRoute() : boolean{
@@ -32,7 +40,7 @@ export class AppComponent {
 
   backgroundApplicableRoute() : boolean{
     var route = this.rout.url;
-    if( route == '/locations' || route == '/location-detail' || route == '/sign-in' || route == '/register' || route == '/contact-us' || route == '/calendar' ){
+    if( route == '/locations' || route == '/location-detail' || route == '/sign-in' || route == '/register' || route == '/contact-us' || route == '/calendar' || route == '/cart' ){
       return true;
     }
     else{

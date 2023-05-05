@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent {
   @Input() sidebarToggle : boolean = false;
-  test : string = '';
 
   constructor( private route : Router ){}
+
+  ngOnInit(){
+    this.sidebarToggle = false;
+  }
 
   closeSidebar() : void{
     this.sidebarToggle = !this.sidebarToggle;

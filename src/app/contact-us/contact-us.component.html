@@ -1,4 +1,3 @@
-
 <div class="page backgroundApplicable">
   <div class="header">
     <h1>Questions?</h1>
@@ -40,9 +39,15 @@
     </div>
     <br />
     <div class="submit">
-      <button type="button" class="btn btn-primary"(click)="handleQuestionSubmission()">Submit</button>
-      <p>{{successText}}</p>
+      <button
+        type="button"
+        class="btn btn-outline-primary buttonColor"
+        (click)="handleQuestionSubmission()"
+      >
+        Submit
+      </button>
+      <p>{{ successText }}</p>
     </div>
   </div>
+  <br />
 </div>
-

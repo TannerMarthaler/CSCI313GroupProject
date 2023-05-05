@@ -29,14 +29,6 @@ header{
     width: auto;
 }
 
-.signInBtn{
-    opacity: .85;
-}
-
-.signInBtn:hover{
-    opacity: 1;
-}
-
 .title{
     font-size: xx-large;
 }
@@ -54,4 +46,14 @@ header{
 .navBar{
     height: 40px;
     margin-right: 175px;
+}
+
+.buttonColor{
+    background-color: rgb(142, 115, 80);
+    border-color: rgb(142, 115, 80);
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
 }

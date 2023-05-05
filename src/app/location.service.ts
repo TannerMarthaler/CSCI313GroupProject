@@ -28,7 +28,7 @@ export class LocationService {
     {
       id: 0,
       name: 'Fargo',
-      description: 'address',
+      description: '1551 45th St S, Fargo, ND 58103',
       openComputers: 8,
       imageLink: 'assets/pictures/FargoWatertower.jpg'
     },
@@ -36,7 +36,7 @@ export class LocationService {
     {
       id: 1,
       name: 'Moorhead',
-      description: 'address',
+      description: '505 Center Ave, Moorhead, MN 56560',
       openComputers: 4,
       imageLink: 'assets/pictures/MoorheadWatertower.jfif'
     }

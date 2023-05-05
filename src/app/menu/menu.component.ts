@@ -13,11 +13,14 @@ export class MenuComponent {
   menu : MenuItem[] = [];
   @Input() cartItems : number[] = [];
   @Input() cartToggle : boolean = false;
+  numberOfItems : number = 0;
 
   constructor( private mcService : MenuCartService ) {}
 
+
   ngOnInit() {
     this.menu = this.mcService.getMenuItems();
+    this.numberOfItems = this.menu.length;
   }
 
   addToCart(id : number) : void{
