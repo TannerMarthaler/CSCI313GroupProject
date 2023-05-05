@@ -40,7 +40,7 @@ export class AppComponent {
 
   backgroundApplicableRoute() : boolean{
     var route = this.rout.url;
-    if( route == '/locations' || route == '/location-detail' || route == '/sign-in' || route == '/register' || route == '/contact-us' || route == '/calendar' ){
+    if( route == '/locations' || route == '/location-detail' || route == '/sign-in' || route == '/register' || route == '/contact-us' || route == '/calendar' || route == '/cart' ){
       return true;
     }
     else{

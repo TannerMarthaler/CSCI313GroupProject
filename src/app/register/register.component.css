@@ -1,6 +1,5 @@
 .header{
     text-align:center;
-    margin-top:40px;
 }
 
 .body{
@@ -30,4 +29,18 @@ input:invalid {
     border-color: gray;
   }
 
+  .buttonColor{
+    background-color: transparent;
+    border-color: rgb(142, 115, 80);
+    color : white;
+}
+
+.buttonColor:hover{
+    background-color: rgb(142, 115, 80);
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
+}
   

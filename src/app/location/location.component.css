@@ -10,6 +10,14 @@
     margin-right : auto;
     width: 30rem;
 }
-    
-      
-      
+
+.buttonColor{
+    background-color: rgb(142, 115, 80);
+    border-color: rgb(142, 115, 80);
+    color : white;
+}
+
+.buttonColor:active{
+    background-color: black;
+    border-color: black
+}
