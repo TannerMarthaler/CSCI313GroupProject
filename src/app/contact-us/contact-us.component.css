@@ -1,6 +1,6 @@
 .header{
     text-align:center;
-    margin-top:40px;
+
 }
 
 .body{
@@ -19,5 +19,19 @@
 
 .page{
     text-align:center;
+}
+
+
+textarea{
+    height: 150px;
+    width: 300px;
+}
+
+.questionArea{
+    margin-right: 40%
+}
+
+.questionLabel{
+    text-align : center
 }
 

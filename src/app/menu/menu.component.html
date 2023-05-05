@@ -1,14 +1,7 @@
 <header>
-  <img class="bgImageMenu" src="../../assets/pictures/menuHeader.jpg" alt="" />
+  <img class="bgImageMenu" src="assets/pictures/menuHeader.jpg" alt="" />
 
-  <!-- <div class="container headerContent"> -->
-  <!-- <div class="row col-md-6 offset-md-4"> -->
-  <!-- <div class="col-md-8"> -->
   <p class="headerContent" style="margin-left: 47%; margin-right: 53%">Menu</p>
-  <!-- </div>
-      <div class="col-md-4"></div>
-    </div>
-  </div> -->
 </header>
 
 <div class="row backgroundApplicable">
@@ -20,35 +13,40 @@
     ></i>
   </button>
   <ng-container *ngFor="let item of menu">
-    <div class="col-md-3 menuItemCards">
-      <div class="card">
-        <img class="card-img-top menuImage" src="{{ item.photoLink }}" alt="" />
-        <div class="card-body">
-          <div class="card-title">
-            <h6>{{ item.name }}</h6>
-          </div>
+    <div class="col-md-3">
+      <div class="card-deck menuItemCards">
+        <div class="card">
+          <img
+            class="card-img-top menuImage"
+            src="{{ item.photoLink }}"
+            alt=""
+          />
+          <div class="card-body">
+            <div class="card-title">
+              <h6>{{ item.name }}</h6>
+            </div>
 
-          <div>
-            Price: {{ item.price }} <br />
-            Quantity: {{ item.quantity }}
-          </div>
-          <br />
-          {{ item.desc }}
-          <br />
-          <br />
-          <div *ngIf="item.quantity == 0">
-            <button class="btn btn-primary" (click)="addToCart(item.id)">
-              Add to cart
-            </button>
-          </div>
-          <div *ngIf="item.quantity > 0">
-            <button class="btn btn-primary" (click)="removeItem(item.id)">
-              -
-            </button>
-            {{ item.quantity }}
-            <button class="btn btn-primary" (click)="addToCart(item.id)">
-              +
-            </button>
+            <p class="card-text">
+              Price: {{ item.price }} <br />
+              Quantity: {{ item.quantity }}
+
+              <br />
+              {{ item.desc }}
+            </p>
+            <div *ngIf="item.quantity == 0">
+              <button class="btn btn-primary" (click)="addToCart(item.id)">
+                Add to cart
+              </button>
+            </div>
+            <div *ngIf="item.quantity > 0">
+              <button class="btn btn-primary" (click)="removeItem(item.id)">
+                -
+              </button>
+              {{ item.quantity }}
+              <button class="btn btn-primary" (click)="addToCart(item.id)">
+                +
+              </button>
+            </div>
           </div>
         </div>
       </div>
