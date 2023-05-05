@@ -9,21 +9,23 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { MenuComponent } from './menu/menu.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CartComponent } from './cart/cart.component';
+
 import { LocationComponent } from './location/location.component';
 import { LocationDetailComponent } from './location-detail/location-detail.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 const ROUTES : Routes = [
   { path : '', component : HomeComponent },
+  { path : 'register', component : RegisterComponent },
   { path : 'menu', component : MenuComponent },
   { path : 'locations', component : LocationComponent },
   { path : 'location-detail', component : LocationDetailComponent},
   { path : 'calendar', component : CalendarComponent },
   { path : 'about', component : AboutComponent },
-  // { path : 'contact-us', component : ContactUsComponent },
+  { path : 'contact-us', component : ContactUsComponent },
   { path : 'sign-in', component : SignInComponent },
-  { path : 'cart', component : CartComponent },
-  { path : 'register', component : RegisterComponent }
+  { path : 'cart', component : CartComponent }
 ];
 
 @NgModule({

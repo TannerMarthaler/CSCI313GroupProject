@@ -15,7 +15,6 @@
 .headerContent{
     position : relative;
     font-weight : bold;
-    margin-top : 10px;
     z-index : 1;
     /* position : fixed;  
     width : 100%;  */

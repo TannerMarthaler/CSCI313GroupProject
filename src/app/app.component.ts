@@ -38,6 +38,16 @@ export class AppComponent {
     return this.rout.url == '/';
   }
 
+  backgroundApplicableRoute() : boolean{
+    var route = this.rout.url;
+    if( route == '/locations' || route == '/location-detail' || route == '/sign-in' || route == '/register' || route == '/contact-us' || route == '/calendar' ){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
   logout(){
     this.signInService.logout();
   }
