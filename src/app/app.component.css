@@ -29,14 +29,6 @@ header{
     width: auto;
 }
 
-.signInBtn{
-    opacity: .85;
-}
-
-.signInBtn:hover{
-    opacity: 1;
-}
-
 .title{
     font-size: xx-large;
 }

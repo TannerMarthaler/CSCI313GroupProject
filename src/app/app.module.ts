@@ -53,6 +53,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    FormsModule,
 
     CalendarModule.forRoot({
       provide: DateAdapter,

@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   toggleSidebar() : void{
-    this.isSidebarOpen = !this.isSidebarOpen
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
   currentRoute() : boolean{
