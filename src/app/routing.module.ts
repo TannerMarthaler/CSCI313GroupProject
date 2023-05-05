@@ -10,8 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CartComponent } from './cart/cart.component';
 
-import { ContactUsComponent } from './contact-us/contact-us.component';
-
 import { LocationComponent } from './location/location.component';
 import { LocationDetailComponent } from './location-detail/location-detail.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
