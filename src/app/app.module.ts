@@ -24,6 +24,8 @@ import { AboutComponent } from './about/about.component';
 import { RoutingModule } from './routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
+import { LocationComponent } from './location/location.component';
+import { LocationDetailComponent } from './location-detail/location-detail.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { HomeComponent } from './home/home.component';
     RegisterComponent,
     AboutComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    LocationComponent,
+    LocationDetailComponent
   ],
   imports: [
     BrowserModule,

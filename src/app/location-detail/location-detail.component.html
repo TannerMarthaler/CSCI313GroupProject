@@ -1,0 +1,71 @@
+<!-- <div *ngIf="location">
+    <h1>Fargo</h1>
+    <p>PC's Open: {{fargoCount}}/30</p>
+    <div *ngFor="let pcs of pcFargoList">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+              <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+              <button class="btn-danger" (click)="removeFargo(pcs.id)">Book</button>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div *ngIf="!location">
+    <h1>Moorhead</h1>
+    <p>PC's Open: {{moorheadCount}}/30</p>
+    <div *ngFor="let pcs of pcMoorheadList">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Computer Number: {{pcs.id}}</h5>
+              <p class="card-text">Ram: {{pcs.ram}}, GPU: {{pcs.gpu}}, CPU: {{pcs.processor}}</p>
+              <button class="btn-danger" (click)="removeMoorhead(pcs.id)">Book</button>
+            </div>
+          </div>
+    </div>
+</div> -->
+
+<div *ngIf="selectedLocation == 'Fargo'">
+  <div class="row pcDisplay">
+    <h1>Fargo</h1>
+    <p>PC's Open: {{ fargoCount }}/30</p>
+    <ng-container *ngFor="let pcs of pcFargoList">
+      <div class="col-md-3">
+        <div class="card pcDisplayCard">
+          <div class="card-body">
+            <h5 class="card-title">Computer Number: {{ pcs.id }}</h5>
+            <p class="card-text">
+              Ram: {{ pcs.ram }}, GPU: {{ pcs.gpu }}, CPU: {{ pcs.processor }}
+            </p>
+            <button class="btn btn-danger" (click)="removeFargo(pcs.id, 0)">
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div *ngIf="selectedLocation == 'Moorhead'">
+  <div class="row pcDisplay">
+    <h1>Moorhead</h1>
+    <p>PC's Open: {{ moorheadCount }}/30</p>
+    <ng-container *ngFor="let pcs of pcMoorheadList">
+      <div class="col-md-3">
+        <div class="card pcDisplayCard">
+          <div class="card-body">
+            <h5 class="card-title">Computer Number: {{ pcs.id }}</h5>
+            <p class="card-text">
+              Ram: {{ pcs.ram }}, GPU: {{ pcs.gpu }}, CPU: {{ pcs.processor }}
+            </p>
+            <button class="btn btn-danger" (click)="removeMoorhead(pcs.id, 1)">
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

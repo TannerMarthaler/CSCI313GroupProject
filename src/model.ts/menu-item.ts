@@ -3,5 +3,6 @@ export interface MenuItem{
     name: string,
     price: number,
     desc: string,
-    quantity : number
+    quantity : number,
+    photoLink : string
 }
