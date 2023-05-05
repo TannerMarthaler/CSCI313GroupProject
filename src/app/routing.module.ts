@@ -17,7 +17,7 @@ const ROUTES : Routes = [
   // { path : 'locations', component : LocationComponent },
   { path : 'calendar', component : CalendarComponent },
   { path : 'about', component : AboutComponent },
-  // { path : 'contact-us', component : ContactUsComponent },
+  { path : 'contact-us', component : ContactUsComponent },
   { path : 'sign-in', component : SignInComponent },
   { path : 'cart', component : CartComponent }
 ];
