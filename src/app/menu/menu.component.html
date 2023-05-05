@@ -5,13 +5,22 @@
 </header>
 
 <div class="row backgroundApplicable">
-  <p>Cart code (needs to be moved around)</p>
-  <button class="btn btn-success" routerLink="/cart">
-    <i
-      class="fa-sharp fa-solid fa-cart-shopping fa-3x"
-      style="color: #000000"
-    ></i>
-  </button>
+  <div class="col-md-2">
+    <br />
+    <h5>Showing {{ numberOfItems }} items:</h5>
+  </div>
+  <div class="col-md-8"></div>
+  <div class="col-md-2">
+    <button class="btn btn-success" routerLink="/cart">
+      <i
+        class="fa-sharp fa-solid fa-cart-shopping fa-3x"
+        style="color: #000000"
+      ></i>
+    </button>
+  </div>
+</div>
+
+<div class="row backgroundApplicable">
   <ng-container *ngFor="let item of menu">
     <div class="col-md-3">
       <div class="card-deck menuItemCards">
@@ -34,16 +43,25 @@
               {{ item.desc }}
             </p>
             <div *ngIf="item.quantity == 0">
-              <button class="btn btn-primary" (click)="addToCart(item.id)">
+              <button
+                class="btn btn-primary buttonColor"
+                (click)="addToCart(item.id)"
+              >
                 Add to cart
               </button>
             </div>
             <div *ngIf="item.quantity > 0">
-              <button class="btn btn-primary" (click)="removeItem(item.id)">
+              <button
+                class="btn btn-primary buttonColor"
+                (click)="removeItem(item.id)"
+              >
                 -
               </button>
               {{ item.quantity }}
-              <button class="btn btn-primary" (click)="addToCart(item.id)">
+              <button
+                class="btn btn-primary buttonColor"
+                (click)="addToCart(item.id)"
+              >
                 +
               </button>
             </div>

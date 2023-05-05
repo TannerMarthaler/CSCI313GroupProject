@@ -10,8 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CartComponent } from './cart/cart.component';
 
-import { ContactUsComponent } from './contact-us/contact-us.component';
-
 import { LocationComponent } from './location/location.component';
 import { LocationDetailComponent } from './location-detail/location-detail.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -19,6 +17,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const ROUTES : Routes = [
   { path : '', component : HomeComponent },
+  { path : 'register', component : RegisterComponent },
   { path : 'menu', component : MenuComponent },
   { path : 'locations', component : LocationComponent },
   { path : 'location-detail', component : LocationDetailComponent},

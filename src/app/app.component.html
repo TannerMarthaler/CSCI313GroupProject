@@ -5,25 +5,28 @@
   <div *ngIf="backgroundApplicableRoute()">
     <div class="container-fluid headerContent">
       <div class="row backgroundApplicable">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <button class="btn btn-success" (click)="toggleSidebar()">
             <img class="navBar" src="assets/pictures/navbar.png" alt="" />
           </button>
           <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
         </div>
-        <div class="col-md-8 title">The Spot</div>
-        <div class="col-md-2">
+        <div class="col-md-6 title">The Spot</div>
+        <div class="col-md-3">
           <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
           <button
-            class="btn btn-primary signInBtn"
+            class="btn btn-primary buttonColor"
             *ngIf="!loggedIn"
             routerLink="/sign-in"
           >
             Sign In
           </button>
           <span *ngIf="loggedIn">
-            Welcome, User
-            <button class="btn btn-primary logOutBtn" (click)="logout()">
+            Welcome, {{ username }}
+            <button
+              class="btn btn-primary logOutBtn buttonColor"
+              (click)="logout()"
+            >
               Log out
             </button>
           </span>
@@ -34,25 +37,28 @@
   <div *ngIf="!backgroundApplicableRoute()">
     <div class="container-fluid headerContent">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <button class="btn btn-success" (click)="toggleSidebar()">
             <img class="navBar" src="assets/pictures/navbar.png" alt="" />
           </button>
           <app-sidebar [sidebarToggle]="isSidebarOpen"></app-sidebar>
         </div>
-        <div class="col-md-8 title">The Spot</div>
-        <div class="col-md-2">
+        <div class="col-md-6 title">The Spot</div>
+        <div class="col-md-3">
           <img class="logo" src="assets/pictures/javaLogo.jpg" alt="" />
           <button
-            class="btn btn-primary signInBtn"
+            class="btn btn-primary buttonColor"
             *ngIf="!loggedIn"
             routerLink="/sign-in"
           >
             Sign In
           </button>
           <span *ngIf="loggedIn">
-            Welcome, User
-            <button class="btn btn-primary logOutBtn" (click)="logout()">
+            Welcome, {{ username }}
+            <button
+              class="btn btn-primary logOutBtn buttonColor"
+              (click)="logout()"
+            >
               Log out
             </button>
           </span>

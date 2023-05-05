@@ -1,10 +1,11 @@
-<div class="backgroundApplicable">
+<div class="backgroundApplicable calendarFix">
+  <br />
   <div class="container">
     <div class="row text-center">
       <div class="col-md-4">
         <div class="btn-group">
           <div
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             mwlCalendarPreviousView
             [view]="view"
             [(viewDate)]="viewDate"
@@ -19,7 +20,7 @@
             Today
           </div>
           <div
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             mwlCalendarNextView
             [view]="view"
             [(viewDate)]="viewDate"
@@ -36,21 +37,21 @@
       <div class="col-md-4">
         <div class="btn-group">
           <div
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             (click)="setView(CalendarView.Month)"
             [class.active]="view === CalendarView.Month"
           >
             Month
           </div>
           <div
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             (click)="setView(CalendarView.Week)"
             [class.active]="view === CalendarView.Week"
           >
             Week
           </div>
           <div
-            class="btn btn-primary"
+            class="btn btn-primary buttonColor"
             (click)="setView(CalendarView.Day)"
             [class.active]="view === CalendarView.Day"
           >
@@ -83,8 +84,6 @@
       >
       </mwl-calendar-day-view>
     </div>
-
-
 
     <app-event-details
       [receiveDate]="sendDate"
@@ -148,4 +147,3 @@
 </div> -->
   </div>
 </div>
-

@@ -1,6 +1,6 @@
 .header{
     text-align:center;
-    margin-top:40px;
+    /* margin-top:40px; */
 }
 
 .body{
@@ -20,4 +20,8 @@ button{
 
 .inputs{
     margin-right:100px;
+}
+
+#redirect{
+    font-size: medium;
 }
