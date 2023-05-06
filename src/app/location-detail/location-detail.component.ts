@@ -29,15 +29,16 @@ export class LocationDetailComponent {
 
   fargoList: pcFargo[] = [];
   moorheadList: pcMoorhead[] = [];
+  fargoCount: number = 0;
+  moorheadCount: number = 0;
 
   ngOnInit() {
     this.fargoList = this.locationService.getFargoItems();
     this.moorheadList = this.locationService.getMoorheadItems();
     this.selectedLocation = this.locationService.getLocationSearch();
+    this.fargoCount = this.fargoList.length;
+    this.moorheadCount = this.moorheadList.length;
   }
-
-  fargoCount: number = 8;
-  moorheadCount: number = 4;
 
   //  selectLocation: boolean { //used to decide which page to display fargo or moorhead
   //     if(locationNum == 0){
