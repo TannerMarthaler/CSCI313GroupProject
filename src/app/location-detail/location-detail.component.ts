@@ -14,11 +14,10 @@ export class LocationDetailComponent {
   
 
   selectedLocation: string = '';
-  // location: Location;
-  // constructor(location: boolean){
-
-  // }
-  // @Input() location: boolean;
+  fargoList: pcFargo[] = [];
+  moorheadList: pcMoorhead[] = [];
+  fargoCount: number = 0;
+  moorheadCount: number = 0;
 
   constructor( private locationService : LocationService ) {}
 
@@ -39,15 +38,6 @@ export class LocationDetailComponent {
     this.fargoCount = this.fargoList.length;
     this.moorheadCount = this.moorheadList.length;
   }
-
-  //  selectLocation: boolean { //used to decide which page to display fargo or moorhead
-  //     if(locationNum == 0){
-  //       return true;
-  //     }
-  //     else{
-  //       return false;
-  //     }
-  //  }
 
 
   removeFargo(idRemove : number, id : number) : void {   //remove pc from display and decrease count

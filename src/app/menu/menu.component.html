@@ -12,10 +12,11 @@
   <div class="col-md-8"></div>
   <div class="col-md-2">
     <button class="btn btn-success" routerLink="/cart">
-      <i
+      <!-- <i
         class="fa-sharp fa-solid fa-cart-shopping fa-3x"
         style="color: #000000"
-      ></i>
+      ></i> -->
+      <img src="assets/pictures/cart.png" style="width: 60px; height: auto" />
     </button>
   </div>
 </div>
@@ -36,7 +37,7 @@
             </div>
 
             <p class="card-text">
-              Price: {{ item.price }} <br />
+              Price: ${{ item.price }} each <br />
               Quantity: {{ item.quantity }}
 
               <br />
