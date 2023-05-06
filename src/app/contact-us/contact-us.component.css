@@ -1,6 +1,5 @@
 .header{
     text-align:center;
-
 }
 
 .body{
@@ -19,8 +18,8 @@
 
 .page{
     text-align:center;
+    padding-bottom: 200px;
 }
-
 
 textarea{
     height: 150px;
@@ -34,6 +33,15 @@ textarea{
 .questionLabel{
     text-align : center
 }
+
+
+.submit{
+    /* text-align:right; */
+    margin-right:47.5%;
+}
+
+
+
 
 .buttonColor{
     background-color: transparent;
@@ -49,3 +57,4 @@ textarea{
     background-color: black;
     border-color: black
 }
+
