@@ -24,6 +24,7 @@ export class LocationDetailComponent {
 
   ngOnInit() {
     this.fargoList = this.locationService.getFargoItems();
+    this.moorheadList = this.locationService.getMoorheadItems();
     this.selectedLocation = this.locationService.getLocationSearch();
     this.fargoCount = this.fargoList.length;
     this.moorheadCount = this.moorheadList.length;

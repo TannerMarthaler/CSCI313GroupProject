@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'src/model.ts/menu-item';
-import { menuItems } from '../menu-database';
 
 import { MenuCartService } from '../menu-cart.service';
 
@@ -12,7 +11,6 @@ import { MenuCartService } from '../menu-cart.service';
 export class MenuComponent {
   menu : MenuItem[] = [];
   @Input() cartItems : number[] = [];
-  @Input() cartToggle : boolean = false;
   numberOfItems : number = 0;
 
   constructor( private mcService : MenuCartService ) {}

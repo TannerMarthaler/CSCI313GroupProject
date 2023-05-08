@@ -12,10 +12,6 @@
   <div class="col-md-8"></div>
   <div class="col-md-2">
     <button class="btn btn-success" routerLink="/cart">
-      <!-- <i
-        class="fa-sharp fa-solid fa-cart-shopping fa-3x"
-        style="color: #000000"
-      ></i> -->
       <img src="assets/pictures/cart.png" style="width: 60px; height: auto" />
     </button>
   </div>
@@ -72,30 +68,3 @@
     </div>
   </ng-container>
 </div>
-
-<!-- <div *ngFor="let item of menu">
-  <div class="card">
-    <div class="card-body">
-      <div class="card-title">
-        <h6>{{ item.name }}</h6>
-      </div>
-      <div>
-        Price: {{ item.price }} <br />
-        Quantity: {{ item.quantity }}
-      </div>
-      <br />
-      {{ item.desc }}
-      <br />
-      <div *ngIf="item.quantity == 0">
-        <button class="btn btn-primary" (click)="addToCart(item.id)">
-          Add to cart
-        </button>
-      </div>
-      <div *ngIf="item.quantity > 0">
-        <button class="btn btn-primary" (click)="removeItem(item.id)">-</button>
-        {{ item.quantity }}
-        <button class="btn btn-primary" (click)="addToCart(item.id)">+</button>
-      </div>
-    </div>
-  </div>
-</div> -->

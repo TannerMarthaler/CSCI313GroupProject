@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { menuItems } from '../menu-database';
+import { Component} from '@angular/core';
 import { MenuItem } from 'src/model.ts/menu-item';
 import { Router } from '@angular/router';
 
@@ -13,7 +12,6 @@ import { SignInService } from '../sign-in.service';
 })
 export class CartComponent {
   cartItems : MenuItem[] = [];
-  @Input() cartToggle : boolean = true;
   loggedIn : boolean = false;
   successText : string = "";
   totalItems : number = 0;
@@ -52,8 +50,6 @@ export class CartComponent {
     console.log("Current log in status: " + this.loggedIn);
     if(this.signInService.isLoggedIn){
       this.successText = "Items successfully credited into your account!";
-      this.cartItems = this.mcService.clearCart();
-      // Fix (to remove all items in cart after clicking 'check out')
     }
     else{
       this.router.navigate(['/sign-in']);
