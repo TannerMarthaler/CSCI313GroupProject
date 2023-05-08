@@ -58,7 +58,5 @@ export class CalendarComponent {
     console.log(date);
     this.sendDate = date;
     this.sendEvents = events;
-    //let x=this.adminService.dateFormat(date);
-    //this.openAppointmentList(x);
   }
 }

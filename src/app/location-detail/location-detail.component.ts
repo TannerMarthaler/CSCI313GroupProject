@@ -21,16 +21,6 @@ export class LocationDetailComponent {
 
   constructor( private locationService : LocationService ) {}
 
-  // ngOnInit(){
-  //   this.selectedLocation = this.locationService.getLocationSearch();
-  //   console.log(this.selectedLocation);
-  // }
-
-  fargoList: pcFargo[] = [];
-  moorheadList: pcMoorhead[] = [];
-  fargoCount: number = 0;
-  moorheadCount: number = 0;
-
   ngOnInit() {
     this.fargoList = this.locationService.getFargoItems();
     this.moorheadList = this.locationService.getMoorheadItems();

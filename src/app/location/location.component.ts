@@ -7,7 +7,6 @@ import { LocationService } from './../location.service';
   styleUrls: ['./location.component.css'],
 })
 export class LocationComponent {
-  // @Output() location: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   locationList: {id: number, name: string, description: string, openComputers: number, imageLink: string}[] = []
   selectedLocation: string = '';

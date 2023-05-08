@@ -48,10 +48,4 @@ export class MenuCartService {
 
     return this.totalPrice;
   }
-
-  // Fix
-  clearCart() : MenuItem[]{
-    this.selectedItems = menuItems;
-    return menuItems;
-  }
 }
