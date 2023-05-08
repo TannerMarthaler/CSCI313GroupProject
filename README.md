@@ -1,3 +1,8 @@
+**** Important ****
+If you don't have any errors after installing the zip and running npm install you can disregard this message.
+When you download the zip and run the command npm install to install the node_modules and still have errors you may have to install one more thing.
+The command you have to run is npm install --save @angular/material
+
 # TheSpot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
